@@ -1,0 +1,1545 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=5.0"/>
+<meta name="description" content="Bishal Bishowkarma — Sales & Marketing Specialist, UAE HORECA. B2B/B2C Expert at Zest Group LLC-FZ, Dubai."/>
+<title>Bishal Bishowkarma — Sales & Marketing | UAE HORECA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,900;1,9..144,300;1,9..144,600&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+/* ═══════════════════════════════════════════════
+   RESET
+═══════════════════════════════════════════════ */
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
+body{font-family:'DM Sans',sans-serif;overflow-x:hidden;transition:background .4s,color .4s;-webkit-font-smoothing:antialiased;}
+a{text-decoration:none;color:inherit;}
+img{display:block;max-width:100%;}
+button{font-family:inherit;cursor:pointer;}
+::selection{background:var(--gold);color:var(--bg);}
+
+/* ═══════════════════════════════════════════════
+   DARK THEME
+═══════════════════════════════════════════════ */
+[data-theme="dark"]{
+  --bg:#080a0e; --bg2:#0c1016; --bg3:#111820;
+  --card:#15192600; --card-solid:#151926;
+  --gold:#d4a847; --gold2:#f0c96e; --gold-dim:rgba(212,168,71,.11);
+  --text:#f0ece3; --text2:#7c7870; --text3:#2a2925;
+  --border:rgba(212,168,71,.1); --border2:rgba(212,168,71,.26);
+  --nav-bg:rgba(8,10,14,.95); --drawer-bg:#0c1016;
+  --tag-bg:rgba(212,168,71,.08); --shadow:0 20px 56px rgba(0,0,0,.55);
+  --ease:cubic-bezier(.16,1,.3,1);
+  background:var(--bg);color:var(--text);
+}
+
+/* ═══════════════════════════════════════════════
+   LIGHT THEME
+═══════════════════════════════════════════════ */
+[data-theme="light"]{
+  --bg:#f6f2eb; --bg2:#ece7de; --bg3:#e2ddd2;
+  --card:rgba(255,255,255,0); --card-solid:#ffffff;
+  --gold:#8a6010; --gold2:#a87820; --gold-dim:rgba(138,96,16,.09);
+  --text:#17150e; --text2:#6e6960; --text3:#c0bab0;
+  --border:rgba(138,96,16,.12); --border2:rgba(138,96,16,.3);
+  --nav-bg:rgba(246,242,235,.96); --drawer-bg:#ece7de;
+  --tag-bg:rgba(138,96,16,.07); --shadow:0 20px 56px rgba(0,0,0,.09);
+  --ease:cubic-bezier(.16,1,.3,1);
+  background:var(--bg);color:var(--text);
+}
+
+/* ═══════════════════════════════════════════════
+   SCROLL PROGRESS
+═══════════════════════════════════════════════ */
+#spb{position:fixed;top:0;left:0;right:0;height:2.5px;background:var(--gold);z-index:9999;transform:scaleX(0);transform-origin:left;pointer-events:none;transition:transform .07s linear;}
+
+/* ═══════════════════════════════════════════════
+   NAVIGATION
+═══════════════════════════════════════════════ */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:800;
+  height:64px;display:flex;align-items:center;justify-content:space-between;
+  padding:0 clamp(16px,4vw,56px);
+  background:var(--nav-bg);
+  backdrop-filter:blur(24px) saturate(1.5);
+  -webkit-backdrop-filter:blur(24px) saturate(1.5);
+  border-bottom:.5px solid var(--border2);
+  transition:background .4s,border-color .4s;
+}
+.nav-logo{
+  display:flex;align-items:center;gap:8px;
+  font-family:'Fraunces',serif;font-size:19px;font-weight:700;color:var(--gold);
+  letter-spacing:.3px;flex-shrink:0;z-index:850;
+}
+.nav-pulse{
+  width:7px;height:7px;background:var(--gold);border-radius:50%;flex-shrink:0;
+  animation:pulse 2.4s ease-in-out infinite;
+}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1);}50%{opacity:.35;transform:scale(.55);}}
+
+/* Desktop links */
+.nav-links{display:flex;align-items:center;gap:clamp(16px,2.5vw,32px);}
+.nav-links a{
+  font-size:11px;letter-spacing:1.8px;text-transform:uppercase;
+  font-weight:500;color:var(--text2);
+  transition:color .25s;position:relative;padding-bottom:2px;white-space:nowrap;
+}
+.nav-links a::after{
+  content:'';position:absolute;bottom:0;left:0;right:0;height:1px;
+  background:var(--gold);transform:scaleX(0);transform-origin:left;
+  transition:transform .3s var(--ease);
+}
+.nav-links a:hover,.nav-links a.active{color:var(--gold);}
+.nav-links a:hover::after,.nav-links a.active::after{transform:scaleX(1);}
+
+/* Right controls */
+.nav-right{display:flex;align-items:center;gap:8px;z-index:850;}
+.theme-btn{
+  width:36px;height:36px;border-radius:50%;border:.5px solid var(--border2);
+  background:var(--card-solid);display:flex;align-items:center;justify-content:center;
+  font-size:16px;color:var(--text2);transition:all .3s;flex-shrink:0;
+}
+.theme-btn:hover{border-color:var(--gold);color:var(--gold);transform:rotate(18deg);}
+.nav-cta{
+  padding:8px 18px;background:var(--gold);color:var(--bg);
+  border:none;font-family:'DM Mono',monospace;font-size:10px;
+  letter-spacing:1.5px;text-transform:uppercase;font-weight:500;
+  transition:all .3s;border-radius:1px;white-space:nowrap;
+  display:none; /* shown ≥768px */
+}
+.nav-cta:hover{background:var(--gold2);}
+
+/* ═══ HAMBURGER BUTTON ═══ */
+.hamburger{
+  display:flex;flex-direction:column;justify-content:center;
+  align-items:center;gap:5px;width:40px;height:40px;
+  border:none;background:transparent;flex-shrink:0;
+  padding:4px;z-index:850;
+}
+.hamburger span{
+  display:block;width:22px;height:1.5px;background:var(--gold);
+  transition:transform .35s var(--ease),opacity .25s,width .3s;
+  transform-origin:center;border-radius:1px;
+}
+.hamburger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg);}
+.hamburger.open span:nth-child(2){opacity:0;width:0;}
+.hamburger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg);}
+
+/* ═══ MOBILE DRAWER ═══ */
+.mobile-drawer{
+  position:fixed;top:0;left:0;right:0;bottom:0;z-index:790;
+  background:var(--drawer-bg);
+  display:flex;flex-direction:column;justify-content:center;align-items:center;
+  gap:0;
+  transform:translateX(100%);
+  transition:transform .45s var(--ease);
+  pointer-events:none;
+}
+.mobile-drawer.open{transform:translateX(0);pointer-events:all;}
+.mobile-drawer a{
+  font-family:'Fraunces',serif;font-size:clamp(28px,8vw,44px);
+  font-weight:700;color:var(--text2);padding:14px 0;
+  letter-spacing:-1px;transition:color .25s;width:100%;text-align:center;
+  border-bottom:.5px solid var(--border);
+}
+.mobile-drawer a:first-child{border-top:.5px solid var(--border);}
+.mobile-drawer a:hover{color:var(--gold);}
+.drawer-cta{
+  margin-top:32px;padding:14px 40px;background:var(--gold);color:var(--bg) !important;
+  border:none;font-family:'DM Mono',monospace;font-size:11px;
+  letter-spacing:2px;text-transform:uppercase;font-weight:500;border-radius:1px;
+  width:auto !important;text-align:center !important;
+  border-bottom:none !important;
+}
+.mobile-drawer .theme-row{
+  display:flex;align-items:center;gap:12px;margin-top:32px;
+  font-family:'DM Mono',monospace;font-size:10px;
+  letter-spacing:2px;text-transform:uppercase;color:var(--text2);
+}
+.drawer-overlay{
+  position:fixed;inset:0;z-index:785;background:rgba(0,0,0,.4);
+  opacity:0;pointer-events:none;transition:opacity .4s;
+}
+.drawer-overlay.open{opacity:1;pointer-events:all;}
+
+/* ═══════════════════════════════════════════════
+   RESPONSIVE NAV BREAKPOINTS
+═══════════════════════════════════════════════ */
+/* Mobile: <768px → hamburger only */
+@media(max-width:767px){
+  .nav-links{display:none;}
+  .nav-cta{display:none;}
+  .hamburger{display:flex;}
+}
+/* Tablet: 768–1023px → hamburger, show CTA */
+@media(min-width:768px) and (max-width:1023px){
+  .nav-links{display:none;}
+  .nav-cta{display:inline-block;}
+  .hamburger{display:flex;}
+}
+/* Desktop: ≥1024px → full links, no hamburger */
+@media(min-width:1024px){
+  .nav-links{display:flex;}
+  .nav-cta{display:inline-block;}
+  .hamburger{display:none;}
+  .mobile-drawer{display:none;}
+  .drawer-overlay{display:none;}
+}
+
+/* ═══════════════════════════════════════════════
+   SECTION LABEL — PROMINENT (used in About, Experience, Contact)
+═══════════════════════════════════════════════ */
+.section-eyebrow{
+  display:inline-flex;align-items:center;gap:12px;
+  margin-bottom:20px;
+}
+.section-eyebrow-num{
+  font-family:'DM Mono',monospace;font-size:11px;
+  letter-spacing:2px;color:var(--text2);
+}
+.section-eyebrow-label{
+  font-family:'DM Mono',monospace;font-size:11px;
+  letter-spacing:3.5px;text-transform:uppercase;color:var(--gold);
+  font-weight:500;
+}
+.section-eyebrow-line{
+  display:block;width:40px;height:1px;background:var(--gold);flex-shrink:0;
+}
+/* The BIG prominent version for About / Experience / Contact */
+.section-badge{
+  display:inline-flex;align-items:center;gap:14px;
+  margin-bottom:24px;
+  padding:10px 20px 10px 16px;
+  background:var(--gold-dim);
+  border:.5px solid var(--border2);
+  border-radius:2px;
+}
+.section-badge-num{
+  font-family:'Fraunces',serif;font-size:22px;font-weight:600;
+  color:var(--gold);line-height:1;
+}
+.section-badge-sep{width:1px;height:24px;background:var(--border2);}
+.section-badge-text{
+  font-family:'DM Mono',monospace;font-size:12px;
+  letter-spacing:3px;text-transform:uppercase;color:var(--gold);
+  font-weight:500;
+}
+
+/* ═══════════════════════════════════════════════
+   HERO
+═══════════════════════════════════════════════ */
+.hero{
+  min-height:100svh;position:relative;
+  display:flex;align-items:flex-end;overflow:hidden;
+}
+.hero-bg-img{
+  position:absolute;inset:0;
+  background-image:url('https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=1800&q=80');
+  background-size:cover;background-position:center 35%;
+  transform:scale(1.06);
+  transition:transform 10s ease;
+  filter:saturate(.55) brightness(.65);
+  will-change:transform;
+}
+[data-theme="light"] .hero-bg-img{filter:saturate(.6) brightness(.82);}
+.hero-fade{
+  position:absolute;inset:0;
+  background:linear-gradient(to top,var(--bg) 0%,rgba(8,10,14,.7) 42%,rgba(8,10,14,.18) 100%);
+  transition:background .4s;
+}
+[data-theme="light"] .hero-fade{
+  background:linear-gradient(to top,var(--bg) 0%,rgba(246,242,235,.55) 42%,rgba(246,242,235,.1) 100%);
+}
+.hero-inner{
+  position:relative;z-index:2;width:100%;
+  padding:88px clamp(16px,4vw,56px) clamp(48px,8vh,88px);
+  display:flex;flex-direction:column;gap:0;
+}
+.hero-row{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap;}
+
+/* left */
+.hero-left{flex:1;min-width:280px;}
+.hero-tag{
+  display:inline-flex;align-items:center;gap:10px;
+  font-family:'DM Mono',monospace;font-size:9.5px;
+  letter-spacing:3px;text-transform:uppercase;color:var(--gold);
+  margin-bottom:18px;
+  opacity:0;animation:slideUp .9s .15s var(--ease) forwards;
+}
+.hero-tag::before{content:'';display:block;width:24px;height:1px;background:var(--gold);}
+.hero-avail{
+  display:inline-flex;align-items:center;gap:6px;
+  background:var(--gold-dim);border:.5px solid var(--border2);
+  padding:3px 11px;border-radius:100px;font-size:9.5px;color:var(--gold);letter-spacing:.5px;
+}
+.avail-dot{width:6px;height:6px;background:#4ade80;border-radius:50%;animation:pulse 2s ease-in-out infinite;}
+h1.hero-name{
+  font-family:'Fraunces',serif;
+  font-size:clamp(52px,9vw,114px);
+  font-weight:900;line-height:.88;letter-spacing:-3px;color:var(--text);
+  opacity:0;animation:slideUp 1s .3s var(--ease) forwards;
+}
+h1.hero-name em{font-style:italic;font-weight:300;color:var(--gold);display:block;}
+.hero-title{
+  font-family:'DM Mono',monospace;font-size:clamp(9px,1.5vw,11px);
+  letter-spacing:2px;text-transform:uppercase;color:var(--text2);
+  margin:18px 0;
+  opacity:0;animation:slideUp .9s .5s var(--ease) forwards;
+}
+.hero-desc{
+  font-size:clamp(13px,2vw,15px);font-weight:300;color:var(--text2);
+  line-height:1.8;max-width:500px;
+  opacity:0;animation:slideUp .9s .62s var(--ease) forwards;
+}
+.hero-chips{
+  display:flex;flex-wrap:wrap;gap:7px;margin:20px 0 30px;
+  opacity:0;animation:slideUp .9s .74s var(--ease) forwards;
+}
+.hero-chip{
+  background:var(--tag-bg);border:.5px solid var(--border);
+  padding:4px 13px;border-radius:100px;
+  font-size:10.5px;font-weight:500;color:var(--text2);letter-spacing:.5px;
+}
+.hero-btns{
+  display:flex;gap:10px;flex-wrap:wrap;
+  opacity:0;animation:slideUp .9s .86s var(--ease) forwards;
+}
+.btn-gold{
+  padding:13px clamp(18px,3vw,30px);background:var(--gold);color:var(--bg);
+  border:none;font-family:'DM Mono',monospace;font-size:10px;
+  letter-spacing:1.5px;text-transform:uppercase;font-weight:500;
+  border-radius:1px;transition:all .3s;display:inline-flex;align-items:center;gap:7px;
+}
+.btn-gold:hover{background:var(--gold2);transform:translateY(-2px);}
+.btn-ghost{
+  padding:13px clamp(18px,3vw,30px);background:transparent;
+  border:.5px solid rgba(255,255,255,.25);color:var(--text);
+  font-family:'DM Mono',monospace;font-size:10px;
+  letter-spacing:1.5px;text-transform:uppercase;
+  border-radius:1px;transition:all .3s;
+}
+[data-theme="light"] .btn-ghost{border-color:var(--border2);}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold);}
+
+/* right — stats */
+.hero-stats{
+  display:flex;flex-direction:column;gap:2px;flex-shrink:0;
+  opacity:0;animation:slideUp .9s 1s var(--ease) forwards;
+}
+.hero-stat{
+  background:rgba(13,16,24,.65);
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  border:.5px solid rgba(255,255,255,.08);
+  padding:clamp(12px,2vh,18px) clamp(16px,2vw,24px);
+  text-align:right;min-width:clamp(130px,18vw,160px);
+  transition:border-color .3s;
+}
+[data-theme="light"] .hero-stat{background:rgba(255,255,255,.7);border-color:var(--border);}
+.hero-stat:hover{border-color:var(--border2);}
+.hero-stat-n{
+  font-family:'Fraunces',serif;font-size:clamp(24px,3.5vw,32px);
+  font-weight:700;color:var(--gold);display:block;line-height:1;
+}
+.hero-stat-l{
+  font-family:'DM Mono',monospace;font-size:8px;
+  letter-spacing:2px;text-transform:uppercase;color:var(--text2);
+  display:block;margin-top:4px;
+}
+/* scroll hint */
+.scroll-hint{
+  display:flex;flex-direction:column;align-items:center;gap:8px;
+  margin-top:32px;
+  opacity:0;animation:fadeIn 1s 1.6s ease forwards;
+}
+.scroll-hint span{font-family:'DM Mono',monospace;font-size:8.5px;letter-spacing:2px;text-transform:uppercase;color:var(--text2);}
+.scroll-bar{width:1px;height:38px;background:linear-gradient(to bottom,var(--gold),transparent);animation:scrollPulse 2s ease-in-out infinite;}
+@keyframes scrollPulse{0%,100%{transform:scaleY(1);}50%{transform:scaleY(.55);}}
+
+/* ═══════════════════════════════════════════════
+   TICKER
+═══════════════════════════════════════════════ */
+.ticker{border-top:.5px solid var(--border);border-bottom:.5px solid var(--border);background:var(--bg2);padding:11px 0;overflow:hidden;white-space:nowrap;}
+.ticker-track{display:inline-flex;gap:44px;animation:tickAnim 30s linear infinite;}
+@keyframes tickAnim{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+.ticker-item{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--text2);display:inline-flex;align-items:center;gap:12px;}
+.ticker-dot{color:var(--gold);font-size:6px;}
+
+/* ═══════════════════════════════════════════════
+   SECTIONS BASE
+═══════════════════════════════════════════════ */
+.section{padding:clamp(64px,10vh,112px) clamp(16px,4vw,56px);}
+.section-h{
+  font-family:'Fraunces',serif;font-size:clamp(32px,5vw,62px);
+  font-weight:700;line-height:1.06;color:var(--text);margin-bottom:16px;
+}
+.section-h em{font-style:italic;color:var(--gold);font-weight:300;}
+.section-sub{font-size:clamp(13px,1.8vw,15px);font-weight:300;color:var(--text2);line-height:1.8;}
+
+/* ═══════════════════════════════════════════════
+   ABOUT ME  (Changes: bigger badge, no stats grid, image fills right column)
+═══════════════════════════════════════════════ */
+.about-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:clamp(32px,6vw,88px);
+  align-items:start;
+  margin-top:clamp(32px,5vw,56px);
+}
+.about-body p{
+  font-size:clamp(13px,1.8vw,15px);font-weight:300;color:var(--text2);
+  line-height:1.9;margin-bottom:16px;
+}
+.about-body strong{color:var(--text);font-weight:600;}
+.about-chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:24px;}
+.a-chip{
+  background:var(--tag-bg);border:.5px solid var(--border);
+  padding:5px 13px;border-radius:1px;
+  font-family:'DM Mono',monospace;font-size:9px;
+  letter-spacing:1px;text-transform:uppercase;color:var(--text2);
+  transition:all .3s;
+}
+.a-chip:hover{border-color:var(--gold);color:var(--gold);background:var(--gold-dim);}
+
+/* About image — fills column, no stats below */
+.about-img-col{position:relative;}
+.about-img-frame{
+  position:relative;width:100%;
+  /* Aspect ratio matched to left column height */
+  aspect-ratio:4/5;
+  overflow:hidden;border-radius:2px;
+}
+.about-img-frame img{
+  width:100%;height:100%;object-fit:cover;
+  filter:saturate(.72);
+  transition:transform .8s var(--ease),filter .5s;
+}
+.about-img-frame:hover img{transform:scale(1.04);filter:saturate(.95);}
+.about-img-frame::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(to bottom,transparent 55%,var(--bg) 100%);
+  pointer-events:none;
+}
+.about-img-deco{
+  position:absolute;bottom:-14px;right:-14px;
+  width:50%;height:50%;border:.5px solid var(--border2);
+  pointer-events:none;border-radius:2px;
+}
+/* Floating label on image */
+.about-img-tag{
+  position:absolute;bottom:20px;left:20px;z-index:2;
+  background:var(--gold);color:var(--bg);
+  font-family:'DM Mono',monospace;font-size:8.5px;
+  letter-spacing:1.5px;text-transform:uppercase;font-weight:500;
+  padding:6px 12px;border-radius:1px;
+}
+
+/* ═══════════════════════════════════════════════
+   EXPERIENCE / CAREER
+═══════════════════════════════════════════════ */
+.exp-section{background:var(--bg2);}
+.exp-wrap{margin-top:clamp(40px,6vw,64px);position:relative;}
+/* vertical timeline line */
+.timeline-line{
+  position:absolute;left:clamp(120px,15vw,192px);top:12px;bottom:12px;
+  width:.5px;background:linear-gradient(to bottom,var(--gold),transparent);
+  opacity:.35;pointer-events:none;
+}
+/* each entry */
+.exp-item{
+  display:grid;
+  grid-template-columns:clamp(120px,15vw,192px) 1fr;
+  gap:0;position:relative;
+}
+.exp-item+.exp-item{border-top:.5px solid var(--border);}
+/* left panel */
+.exp-left{
+  padding:clamp(28px,4vw,44px) clamp(20px,3vw,44px) clamp(28px,4vw,44px) 0;
+  display:flex;flex-direction:column;gap:5px;position:relative;
+}
+.exp-period{font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:1.2px;text-transform:uppercase;color:var(--gold);}
+.exp-duration{font-family:'DM Mono',monospace;font-size:8.5px;letter-spacing:1px;color:var(--text2);}
+.exp-location-line{font-family:'DM Mono',monospace;font-size:8px;letter-spacing:.8px;color:var(--text3);margin-top:3px;}
+.exp-badge{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:32px;height:32px;margin-top:10px;
+  background:var(--gold-dim);border:.5px solid var(--border2);border-radius:2px;
+  font-family:'Fraunces',serif;font-size:12px;font-weight:700;color:var(--gold);
+}
+/* timeline dot */
+.exp-dot{
+  position:absolute;right:-5px;top:clamp(30px,5vw,48px);
+  width:10px;height:10px;background:var(--gold);border-radius:50%;
+  border:2px solid var(--bg2);z-index:2;
+  transition:transform .3s,box-shadow .3s;
+}
+.exp-item:hover .exp-dot{transform:scale(1.6);box-shadow:0 0 10px var(--gold);}
+/* right panel */
+.exp-right{
+  padding:clamp(28px,4vw,44px) 0 clamp(28px,4vw,44px) clamp(28px,4vw,52px);
+  border-left:.5px solid var(--border);
+}
+.exp-role{
+  font-family:'Fraunces',serif;font-size:clamp(18px,2.5vw,24px);
+  font-weight:700;color:var(--text);line-height:1.15;margin-bottom:4px;
+}
+.exp-active{
+  display:inline-flex;align-items:center;gap:5px;
+  background:rgba(74,222,128,.1);border:.5px solid rgba(74,222,128,.28);
+  padding:2px 9px;border-radius:100px;margin-left:8px;
+  font-family:'DM Mono',monospace;font-size:8px;
+  letter-spacing:1px;text-transform:uppercase;color:#4ade80;
+  vertical-align:middle;
+}
+.exp-active::before{content:'';width:5px;height:5px;background:#4ade80;border-radius:50%;animation:pulse 2s ease-in-out infinite;}
+.exp-company{
+  font-family:'DM Mono',monospace;font-size:9.5px;
+  letter-spacing:2px;text-transform:uppercase;color:var(--gold);
+  margin-bottom:14px;display:flex;align-items:center;gap:8px;flex-wrap:wrap;
+}
+.exp-flag{
+  width:16px;height:11px;border-radius:1px;display:inline-block;
+  overflow:hidden;flex-shrink:0;
+}
+.exp-desc{
+  font-size:clamp(12.5px,1.7vw,13.5px);font-weight:300;color:var(--text2);
+  line-height:1.85;margin-bottom:14px;
+}
+/* NOTE: callout box REMOVED per command 3 */
+.exp-tags{display:flex;flex-wrap:wrap;gap:6px;}
+.exp-tag{
+  background:var(--tag-bg);border:.5px solid var(--border);
+  padding:4px 11px;border-radius:100px;
+  font-family:'DM Mono',monospace;font-size:8.5px;
+  letter-spacing:1px;text-transform:uppercase;color:var(--text2);
+}
+
+/* ═══════════════════════════════════════════════
+   EDUCATION
+═══════════════════════════════════════════════ */
+.edu-section{background:var(--bg3);}
+.edu-card{
+  display:flex;align-items:center;gap:clamp(16px,3vw,28px);flex-wrap:wrap;
+  background:var(--card-solid);border:.5px solid var(--border);
+  padding:clamp(18px,3vw,28px) clamp(18px,3vw,32px);border-radius:3px;
+  margin-top:36px;transition:border-color .3s;
+}
+.edu-card:hover{border-color:var(--border2);}
+.edu-icon{
+  width:50px;height:50px;background:var(--gold-dim);
+  border:.5px solid var(--border2);border-radius:2px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:22px;flex-shrink:0;
+}
+.edu-info{flex:1;min-width:200px;}
+.edu-name{font-family:'Fraunces',serif;font-size:clamp(16px,2.5vw,20px);font-weight:700;color:var(--text);margin-bottom:4px;}
+.edu-school{font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);}
+.edu-years{text-align:right;flex-shrink:0;}
+.edu-year-big{font-family:'Fraunces',serif;font-size:clamp(20px,3vw,26px);font-weight:700;color:var(--gold);}
+.edu-year-range{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:1px;color:var(--text2);}
+
+/* ═══════════════════════════════════════════════
+   FULL-BLEED QUOTE
+═══════════════════════════════════════════════ */
+.fullbleed{
+  height:clamp(260px,40vw,420px);position:relative;overflow:hidden;
+}
+.fullbleed img{
+  width:100%;height:100%;object-fit:cover;object-position:center 42%;
+  filter:saturate(.5) brightness(.58);transition:transform 12s ease;
+}
+.fullbleed:hover img{transform:scale(1.04);}
+.fullbleed-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(135deg,var(--bg) 0%,transparent 52%,var(--bg) 100%);
+}
+.fullbleed-text{
+  position:absolute;inset:0;z-index:2;
+  display:flex;align-items:center;padding:0 clamp(16px,4vw,56px);
+}
+.fullbleed-quote{
+  font-family:'Fraunces',serif;
+  font-size:clamp(18px,3.2vw,36px);
+  font-style:italic;font-weight:300;color:var(--text);
+  line-height:1.3;max-width:580px;
+}
+.fullbleed-quote cite{
+  display:block;margin-top:14px;font-style:normal;
+  font-family:'DM Mono',monospace;font-size:9.5px;
+  letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);
+}
+
+/* ═══════════════════════════════════════════════
+   EXPERTISE GRID
+═══════════════════════════════════════════════ */
+.exp2-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:1px;margin-top:clamp(32px,5vw,52px);
+  border:.5px solid var(--border);overflow:hidden;
+}
+.exp2-card{
+  background:var(--bg);padding:clamp(22px,3.5vw,36px) clamp(16px,2.5vw,28px);
+  border:.5px solid var(--border);position:relative;overflow:hidden;
+  transition:background .35s,border-color .35s;
+}
+.exp2-card:hover{background:var(--card-solid);border-color:var(--border2);}
+.exp2-num{
+  font-family:'Fraunces',serif;font-size:clamp(40px,5vw,56px);
+  font-weight:900;color:var(--border);line-height:1;margin-bottom:12px;
+  transition:color .35s;
+}
+.exp2-card:hover .exp2-num{color:var(--gold-dim);}
+.exp2-title{font-family:'Fraunces',serif;font-size:clamp(15px,2vw,20px);font-weight:700;color:var(--text);margin-bottom:8px;}
+.exp2-desc{font-size:11.5px;font-weight:300;color:var(--text2);line-height:1.78;margin-bottom:12px;}
+.exp2-brands{font-family:'DM Mono',monospace;font-size:8.5px;letter-spacing:1px;color:var(--gold);line-height:1.9;}
+.exp2-bar{position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .4s var(--ease);}
+.exp2-card:hover .exp2-bar{transform:scaleX(1);}
+
+/* ═══════════════════════════════════════════════
+   SKILLS
+═══════════════════════════════════════════════ */
+.skills-section{background:var(--bg2);}
+.skills-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:clamp(32px,5vw,52px);}
+.skill-block{background:var(--card-solid);border:.5px solid var(--border);padding:clamp(20px,3vw,28px);border-radius:2px;transition:border-color .3s;}
+.skill-block:hover{border-color:var(--border2);}
+.skill-block-title{font-family:'Fraunces',serif;font-size:clamp(15px,2vw,18px);font-weight:700;color:var(--text);margin-bottom:16px;display:flex;align-items:center;gap:8px;}
+.skill-block-title span{font-size:18px;}
+.skill-row{margin-bottom:12px;}
+.skill-row-top{display:flex;justify-content:space-between;margin-bottom:6px;}
+.skill-name{font-size:12px;font-weight:500;color:var(--text2);}
+.skill-pct{font-family:'DM Mono',monospace;font-size:9.5px;color:var(--gold);}
+.skill-bg{height:1.5px;background:var(--border);border-radius:100px;overflow:hidden;}
+.skill-fill{height:100%;background:var(--gold);border-radius:100px;transform:scaleX(0);transform-origin:left;transition:transform 1.3s var(--ease);}
+.skill-fill.go{transform:scaleX(1);}
+
+/* ═══════════════════════════════════════════════
+   BRANDS
+═══════════════════════════════════════════════ */
+.brands-wrap{display:flex;flex-wrap:wrap;gap:2px;margin-top:clamp(28px,4vw,44px);}
+.b-chip{
+  background:var(--card-solid);border:.5px solid var(--border);
+  padding:9px 16px;
+  font-family:'DM Mono',monospace;font-size:9px;
+  letter-spacing:1.5px;text-transform:uppercase;color:var(--text2);
+  transition:all .3s;cursor:default;border-radius:1px;
+}
+.b-chip:hover{border-color:var(--gold);color:var(--gold);background:var(--gold-dim);transform:translateY(-2px);}
+.b-chip.hot{border-color:var(--border2);color:var(--gold);background:var(--gold-dim);}
+.brands-note{font-family:'DM Mono',monospace;font-size:8.5px;letter-spacing:1.5px;color:var(--text2);margin-top:14px;}
+
+/* ═══════════════════════════════════════════════
+   CONTACT (Changes: bigger badge, real details, working form)
+═══════════════════════════════════════════════ */
+.contact-section{background:var(--bg3);border-top:.5px solid var(--border);}
+.contact-grid{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:clamp(32px,6vw,80px);margin-top:clamp(32px,5vw,52px);
+  align-items:start;
+}
+.contact-h{
+  font-family:'Fraunces',serif;font-size:clamp(30px,5vw,56px);
+  font-weight:700;line-height:1.1;color:var(--text);margin-bottom:16px;
+}
+.contact-h em{font-style:italic;color:var(--gold);font-weight:300;}
+.contact-sub{font-size:clamp(12.5px,1.7vw,14px);font-weight:300;color:var(--text2);line-height:1.8;margin-bottom:28px;}
+/* contact rows */
+.c-rows{border-top:.5px solid var(--border);}
+.c-row{
+  display:flex;align-items:center;gap:14px;
+  padding:14px 0;border-bottom:.5px solid var(--border);
+  transition:padding-left .3s;
+}
+.c-row:hover{padding-left:6px;}
+.c-icon{
+  width:34px;height:34px;background:var(--gold-dim);
+  border:.5px solid var(--border2);border-radius:2px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:15px;flex-shrink:0;
+}
+.c-lbl{font-family:'DM Mono',monospace;font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--text2);}
+.c-val{font-size:clamp(12px,1.7vw,13.5px);font-weight:500;color:var(--text);margin-top:2px;}
+.c-val a{color:var(--gold);}
+/* form */
+.form-wrap{display:flex;flex-direction:column;gap:10px;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.form-wrap input,.form-wrap textarea{
+  width:100%;background:var(--card-solid);
+  border:.5px solid var(--border);border-radius:1px;
+  padding:clamp(11px,1.5vw,14px) 14px;
+  font-family:'DM Sans',sans-serif;font-size:13px;color:var(--text);
+  outline:none;transition:border-color .3s,background .3s;
+}
+.form-wrap input:focus,.form-wrap textarea:focus{border-color:var(--gold);}
+.form-wrap input::placeholder,.form-wrap textarea::placeholder{color:var(--text2);font-size:12px;}
+.form-submit{
+  padding:14px 28px;background:var(--gold);color:var(--bg);
+  border:none;font-family:'DM Mono',monospace;font-size:10px;
+  letter-spacing:1.5px;text-transform:uppercase;font-weight:500;
+  border-radius:1px;transition:all .3s;align-self:flex-start;
+  display:flex;align-items:center;gap:8px;
+}
+.form-submit:hover{background:var(--gold2);transform:translateY(-2px);}
+.form-submit.sent{background:#16a34a !important;transform:none !important;}
+.form-note{font-family:'DM Mono',monospace;font-size:8.5px;letter-spacing:1px;color:var(--text2);margin-top:6px;}
+
+/* ═══════════════════════════════════════════════
+   FOOTER
+═══════════════════════════════════════════════ */
+footer{
+  padding:20px clamp(16px,4vw,56px);border-top:.5px solid var(--border);
+  display:flex;justify-content:space-between;align-items:center;
+  flex-wrap:wrap;gap:10px;background:var(--bg);
+}
+.ft-copy{font-family:'DM Mono',monospace;font-size:8.5px;letter-spacing:1px;color:var(--text2);}
+.ft-right{display:flex;align-items:center;gap:20px;}
+.ft-right a{font-family:'DM Mono',monospace;font-size:8.5px;letter-spacing:1px;color:var(--gold);transition:opacity .3s;}
+.ft-right a:hover{opacity:.65;}
+.ft-top{background:none;border:none;font-family:'DM Mono',monospace;font-size:8.5px;letter-spacing:1.5px;color:var(--text2);cursor:pointer;transition:color .3s;}
+.ft-top:hover{color:var(--gold);}
+
+/* ═══════════════════════════════════════════════
+   SCROLL ANIMATIONS
+═══════════════════════════════════════════════ */
+.r{opacity:0;transform:translateY(28px);transition:opacity .85s var(--ease),transform .85s var(--ease);}
+.rl{opacity:0;transform:translateX(-28px);transition:opacity .85s var(--ease),transform .85s var(--ease);}
+.rr{opacity:0;transform:translateX(28px);transition:opacity .85s var(--ease),transform .85s var(--ease);}
+.r.v,.rl.v,.rr.v{opacity:1;transform:translate(0);}
+.d1{transition-delay:.1s;} .d2{transition-delay:.2s;} .d3{transition-delay:.3s;}
+.d4{transition-delay:.4s;} .d5{transition-delay:.5s;} .d6{transition-delay:.6s;}
+
+@keyframes slideUp{from{opacity:0;transform:translateY(22px);}to{opacity:1;transform:translateY(0);}}
+@keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
+
+/* ═══════════════════════════════════════════════
+   RESPONSIVE BREAKPOINTS — ALL SECTIONS
+═══════════════════════════════════════════════ */
+
+/* Large tablets / small laptops: 768–1023px */
+@media(max-width:1023px){
+  .about-grid{grid-template-columns:1fr;}
+  .about-img-frame{aspect-ratio:16/9;}
+  .about-img-deco{display:none;}
+  .exp2-grid{grid-template-columns:repeat(2,1fr);}
+  .skills-grid{grid-template-columns:1fr;}
+  .contact-grid{grid-template-columns:1fr;}
+  .hero-stats{flex-direction:row;gap:2px;margin-top:20px;}
+  .hero-stat{min-width:auto;flex:1;text-align:center;}
+}
+
+/* Mobile: <768px */
+@media(max-width:767px){
+  .hero-row{flex-direction:column;}
+  .hero-stats{flex-direction:row;gap:2px;width:100%;margin-top:20px;}
+  .hero-stat{flex:1;text-align:center;padding:12px 8px;}
+  .hero-stat-n{font-size:20px;}
+  .hero-stat-l{font-size:7px;}
+  .about-grid{grid-template-columns:1fr;}
+  .about-img-frame{aspect-ratio:4/3;}
+  .about-img-deco{display:none;}
+  .exp2-grid{grid-template-columns:1fr;}
+  .skills-grid{grid-template-columns:1fr;}
+  .contact-grid{grid-template-columns:1fr;}
+  .form-row{grid-template-columns:1fr;}
+  /* timeline mobile */
+  .timeline-line{display:none;}
+  .exp-dot{display:none;}
+  .exp-item{grid-template-columns:1fr;}
+  .exp-left{padding:24px 0 0;border-bottom:.5px solid var(--border);}
+  .exp-right{padding:20px 0 28px;border-left:none;}
+  /* edu */
+  .edu-years{width:100%;text-align:left;}
+  /* fullbleed */
+  .fullbleed-overlay{background:linear-gradient(to top,var(--bg) 0%,rgba(8,10,14,.75) 100%);}
+  .fullbleed-text{align-items:flex-end;padding:0 16px 24px;}
+  /* footer */
+  footer{flex-direction:column;text-align:center;}
+  .ft-right{justify-content:center;}
+  /* section badge mobile */
+  .section-badge{flex-wrap:wrap;}
+  .section-badge-num{font-size:18px;}
+  .section-badge-text{font-size:10px;}
+}
+
+/* Very small phones */
+@media(max-width:380px){
+  h1.hero-name{font-size:44px;letter-spacing:-2px;}
+  .section-h{font-size:28px;}
+  .hero-chips{gap:5px;}
+  .hero-chip{font-size:9px;padding:3px 10px;}
+}
+</style>
+</head>
+<body>
+
+<!-- SCROLL PROGRESS -->
+<div id="spb"></div>
+
+<!-- DRAWER OVERLAY -->
+<div class="drawer-overlay" id="drawerOverlay"></div>
+
+<!-- MOBILE DRAWER -->
+<div class="mobile-drawer" id="mobileDrawer">
+  <a href="#about" class="drawer-link">About</a>
+  <a href="#experience" class="drawer-link">Experience</a>
+  <a href="#expertise" class="drawer-link">Expertise</a>
+  <a href="#skills" class="drawer-link">Skills</a>
+  <a href="#brands" class="drawer-link">Brands</a>
+  <a href="#contact" class="drawer-link">Contact</a>
+  <a href="#contact" class="drawer-cta">Hire Me →</a>
+  <div class="theme-row">
+    <span>Theme</span>
+    <button class="theme-btn" id="themeBtn2" title="Toggle theme" style="cursor:pointer;">🌙</button>
+  </div>
+</div>
+
+<!-- ══ NAV ══ -->
+<nav>
+  <a href="#" class="nav-logo"><span class="nav-pulse"></span>Bishal B.</a>
+
+  <!-- Desktop links -->
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#expertise">Expertise</a>
+    <a href="#skills">Skills</a>
+    <a href="#brands">Brands</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <div class="nav-right">
+    <!-- Desktop theme toggle -->
+    <button class="theme-btn" id="themeBtn" title="Toggle theme">🌙</button>
+    <!-- Desktop CTA -->
+    <a href="#contact" class="nav-cta">Hire Me →</a>
+    <!-- Hamburger -->
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ══ HERO ══ -->
+<section class="hero">
+  <div class="hero-bg-img" id="heroBg"></div>
+  <div class="hero-fade"></div>
+  <div class="hero-inner">
+    <div class="hero-row">
+      <!-- Left -->
+      <div class="hero-left">
+        <div class="hero-tag">
+          <div class="hero-avail"><span class="avail-dot"></span>Available for new clients</div>
+          UAE · Dubai &amp; Sharjah
+        </div>
+        <h1 class="hero-name">Bishal<br/><em>Bishowkarma</em></h1>
+        <p class="hero-title">Sales &amp; Marketing Specialist · B2B / B2C · UAE</p>
+        <p class="hero-desc">Revenue-driven sales professional with a decade of B2B &amp; B2C experience. Currently representing Zest Group LLC-FZ — connecting 30+ premium global brands to Dubai's finest hotels, restaurants, and resorts.</p>
+        <div class="hero-chips">
+          <span class="hero-chip">B2B / B2C Sales</span>
+          <span class="hero-chip">Client Relations</span>
+          <span class="hero-chip">Revenue Growth</span>
+          <span class="hero-chip">Market Strategy</span>
+          <span class="hero-chip">CRM</span>
+          <span class="hero-chip">Cross-Selling</span>
+          <span class="hero-chip">Data-Driven</span>
+        </div>
+        <div class="hero-btns">
+          <a href="#contact" class="btn-gold">Let's Connect →</a>
+          <a href="#experience" class="btn-ghost">View Experience</a>
+        </div>
+      </div>
+      <!-- Right stats — CHANGED: 30+ brands, 10 yrs -->
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <span class="hero-stat-n">30<sup style="font-size:60%;vertical-align:super;">+</sup></span>
+          <span class="hero-stat-l">Premium Brands</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-n">10<sup style="font-size:60%;vertical-align:super;">+</sup></span>
+          <span class="hero-stat-l">Yrs Sales Experience</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-n" style="font-size:clamp(20px,3vw,26px);letter-spacing:-1px;">UAE</span>
+          <span class="hero-stat-l">Current Territory</span>
+        </div>
+      </div>
+    </div>
+    <!-- Scroll hint -->
+    <div class="scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-bar"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ TICKER ══ -->
+<div class="ticker">
+  <div class="ticker-track">
+    <span class="ticker-item">B2B Sales<span class="ticker-dot">✦</span></span>
+    <span class="ticker-item">Client Relations<span class="ticker-dot">✦</span></span>
+    <span class="ticker-item">Revenue Growth<span class="ticker-dot">✦</span></span>
+    <span class="ticker-item">HORECA UAE<span class="ticker-dot">✦</span></span>
+    <span class="ticker-item">Market Strategy<span class="ticker-dot">✦</span></span>
+    <span class="ticker-item">CRM<span class="ticker-dot">✦</span></span>
+    <span class="ticker-item">Shell Lubricants<span class="ticker-dot">✦</span></span>
+    <span class="ticker-item">Zest Group<span class="ticker-dot">✦</span></span>
+    <span class="ticker-item">Dubai · Sharjah<span class="ticker-dot">✦</span></span>
+    <span class="ticker-item">Cross-Selling<span class="ticker-dot">✦</span></span>
+    <!-- duplicate for seamless loop -->
+    <span class="ticker-item">B2B Sales<span class="ticker-dot">✦</span></span>
+    <span class="ticker-item">Client Relations<span class="ticker-dot">✦</span></span>
+    <span class="ticker-item">Revenue Growth<span class="ticker-dot">✦</span></span>
+    <span class="ticker-item">HORECA UAE<span class="ticker-dot">✦</span></span>
+    <span class="ticker-item">Market Strategy<span class="ticker-dot">✦</span></span>
+    <span class="ticker-item">CRM<span class="ticker-dot">✦</span></span>
+    <span class="ticker-item">Shell Lubricants<span class="ticker-dot">✦</span></span>
+    <span class="ticker-item">Zest Group<span class="ticker-dot">✦</span></span>
+    <span class="ticker-item">Dubai · Sharjah<span class="ticker-dot">✦</span></span>
+    <span class="ticker-item">Cross-Selling<span class="ticker-dot">✦</span></span>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+   ABOUT ME — CHANGES:
+   ① Bigger prominent section badge
+   ② No stats grid below image
+   ③ Image resized to fill right column
+══════════════════════════════════════════ -->
+<section class="section" id="about">
+  <!-- CHANGED: big prominent badge instead of tiny eyebrow tag -->
+  <div class="section-badge r">
+    <span class="section-badge-num">01</span>
+    <div class="section-badge-sep"></div>
+    <span class="section-badge-text">About Me</span>
+  </div>
+
+  <h2 class="section-h r d1">
+    Sales professional.<br/><em>Relationship builder.</em><br/>UAE-based since day one.
+  </h2>
+
+  <div class="about-grid">
+    <!-- Left: text -->
+    <div class="rl d2">
+      <div class="about-body">
+        <p>Based in <strong>Al Naif, Union, Dubai</strong>, I'm a results-oriented sales and marketing professional with over a decade of B2B and B2C experience. My journey started in Nepal's competitive lubricant industry — selling Shell products — and evolved into the UAE's vibrant HORECA supply sector.</p>
+        <p>At <strong>Zest Group LLC-FZ</strong>, I represent 30+ premium global brands across 10 product categories — from guestroom appliances to fine porcelain, linen, glassware, buffet equipment, and amenities. Every property I visit is approached with genuine curiosity: understanding their operation, pain points, and ambitions.</p>
+        <p>I believe the best deals are built on <strong>trust, timing, and real value</strong> — not pressure. My multilingual ability in English, Hindi, and Nepali lets me connect authentically across the UAE's diverse hospitality landscape.</p>
+        <p>Continuously sharpening skills in <strong>CRM management, market strategy, and data-driven selling</strong> — building toward a career trajectory that reaches Sales Manager level.</p>
+      </div>
+      <div class="about-chips">
+        <span class="a-chip">B2B Sales</span>
+        <span class="a-chip">B2C Sales</span>
+        <span class="a-chip">HORECA UAE</span>
+        <span class="a-chip">Client Relations</span>
+        <span class="a-chip">Revenue Growth</span>
+        <span class="a-chip">Market Strategy</span>
+        <span class="a-chip">CRM</span>
+        <span class="a-chip">Cross-Selling</span>
+        <span class="a-chip">English</span>
+        <span class="a-chip">Hindi</span>
+        <span class="a-chip">Nepali</span>
+        <span class="a-chip">Data-Driven</span>
+      </div>
+    </div>
+
+    <!-- Right: image only — stats grid REMOVED per command 2 -->
+    <div class="about-img-col rr d2">
+      <div class="about-img-frame">
+        <img
+          src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=900&q=80"
+          alt="Luxury hotel — UAE HORECA market"
+          loading="lazy"
+        />
+        <div class="about-img-tag">UAE HORECA Sales</div>
+      </div>
+      <div class="about-img-deco"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+   CAREER JOURNEY — CHANGES:
+   ① Same big badge as About Me
+   ② Monthly target callout box REMOVED
+   ③ All 4 timeline entries with correct LinkedIn dates
+══════════════════════════════════════════ -->
+<section class="section exp-section" id="experience">
+  <!-- CHANGED: same prominent badge style as About Me -->
+  <div class="section-badge r">
+    <span class="section-badge-num">02</span>
+    <div class="section-badge-sep"></div>
+    <span class="section-badge-text">Career Journey</span>
+  </div>
+
+  <h2 class="section-h r d1">Real experience.<br/><em>Real results.</em> Real markets.</h2>
+  <p class="section-sub r d2">From Nepal's lubricants sector to UAE's luxury hospitality supply — every role built the foundation.</p>
+
+  <div class="exp-wrap">
+    <div class="timeline-line"></div>
+
+    <!-- ── ROLE 1: Zest Group — Feb 2026–Present ── -->
+    <div class="exp-item r">
+      <div class="exp-left">
+        <div class="exp-period">Feb 2026 – Now</div>
+        <div class="exp-duration">3 mos · Present</div>
+        <div class="exp-location-line">Dubai, UAE · Hybrid</div>
+        <div class="exp-badge">ZG</div>
+      </div>
+      <div class="exp-dot"></div>
+      <div class="exp-right">
+        <div class="exp-role">
+          Sales Executive — HORECA
+          <span class="exp-active">Active</span>
+        </div>
+        <div class="exp-company">
+          <span class="exp-flag" style="background:linear-gradient(to bottom,#00732f 33%,#fff 33%,#fff 66%,#ff0000 66%);"></span>
+          Zest Group LLC · Dubai, United Arab Emirates
+        </div>
+        <div class="exp-desc">
+          Specializing in hospitality operational supply solutions for luxury hotels, resorts, beach clubs, and event venues across the UAE. Field sales specialist covering premium HORECA segment — 5-star hotels, fine dining restaurants, and corporate catering. Responsible for new business development, portfolio presentation across 10+ product categories, and converting warm leads into long-term supply partnerships.
+        </div>
+        <!-- CALLOUT BOX REMOVED per command 3 -->
+        <div class="exp-tags">
+          <span class="exp-tag">Field Sales</span>
+          <span class="exp-tag">New Business Dev</span>
+          <span class="exp-tag">HORECA UAE</span>
+          <span class="exp-tag">Sales Strategy</span>
+          <span class="exp-tag">New Market Expansion</span>
+          <span class="exp-tag">Dubai Market</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── ROLE 2: Shell — Sales Officer Nov 2018–Jan 2025 ── -->
+    <div class="exp-item r d1">
+      <div class="exp-left">
+        <div class="exp-period">Nov 2018 – Jan 2025</div>
+        <div class="exp-duration">6 yrs 3 mos</div>
+        <div class="exp-location-line">Kathmandu, Nepal · Hybrid</div>
+        <div class="exp-badge">AP</div>
+      </div>
+      <div class="exp-dot"></div>
+      <div class="exp-right">
+        <div class="exp-role">Sales Officer — B2B &amp; B2C</div>
+        <div class="exp-company">
+          <span class="exp-flag" style="background:linear-gradient(to bottom,#003893 33%,#fff 33%,#fff 66%,#dc143c 66%);"></span>
+          API Business Pvt. Ltd. (Shell Lubricants) · Nepal
+        </div>
+        <div class="exp-desc">
+          Business development through proven ability to identify new business opportunities and grow the customer base while retaining existing clients. Drove B2B and B2C sales of Shell lubricant products across Nepal's commercial and industrial market. Managed client accounts, prospected new targets, executed sales campaigns, and worked closely with distributors and retailers.
+        </div>
+        <div class="exp-tags">
+          <span class="exp-tag">B2B Sales</span>
+          <span class="exp-tag">B2C Sales</span>
+          <span class="exp-tag">Shell Lubricants</span>
+          <span class="exp-tag">Customer Analysis</span>
+          <span class="exp-tag">Analytical Skills</span>
+          <span class="exp-tag">Account Management</span>
+          <span class="exp-tag">FMCG</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── ROLE 3: Shell — Marketing Supervisor Nov 2016–Nov 2018 ── -->
+    <div class="exp-item r d2">
+      <div class="exp-left">
+        <div class="exp-period">Nov 2016 – Nov 2018</div>
+        <div class="exp-duration">2 yrs 1 mo</div>
+        <div class="exp-location-line">Kathmandu, Nepal · On-site</div>
+        <div class="exp-badge">AP</div>
+      </div>
+      <div class="exp-dot"></div>
+      <div class="exp-right">
+        <div class="exp-role">Marketing Supervisor</div>
+        <div class="exp-company">
+          <span class="exp-flag" style="background:linear-gradient(to bottom,#003893 33%,#fff 33%,#fff 66%,#dc143c 66%);"></span>
+          API Business Pvt. Ltd. (Shell Lubricants) · Nepal
+        </div>
+        <div class="exp-desc">
+          Market Analysis &amp; Customer Relationship Management. Led Shell campaign initiatives across Nepal, supervised marketing activities, coordinated with the sales team, and ensured consistent brand messaging in the field. Built strong communication and team collaboration skills across a competitive lubricant market.
+        </div>
+        <div class="exp-tags">
+          <span class="exp-tag">Marketing</span>
+          <span class="exp-tag">Market Analysis</span>
+          <span class="exp-tag">CRM</span>
+          <span class="exp-tag">Communication</span>
+          <span class="exp-tag">Team Collaboration</span>
+          <span class="exp-tag">Shell Campaign</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── ROLE 4: Kullabs — Content Writer Aug 2015–Feb 2016 ── -->
+    <div class="exp-item r d3">
+      <div class="exp-left">
+        <div class="exp-period">Aug 2015 – Feb 2016</div>
+        <div class="exp-duration">7 mos</div>
+        <div class="exp-location-line">Putalisadak, Kathmandu · Remote</div>
+        <div class="exp-badge">KL</div>
+      </div>
+      <div class="exp-dot"></div>
+      <div class="exp-right">
+        <div class="exp-role">Freelance Content Writer</div>
+        <div class="exp-company">
+          <span class="exp-flag" style="background:linear-gradient(to bottom,#003893 33%,#fff 33%,#fff 66%,#dc143c 66%);"></span>
+          Kullabs Techno Lab &amp; Re-Search Center · Nepal
+        </div>
+        <div class="exp-desc">
+          Developed educational content and study materials for online learning platforms. Honed written communication skills, research ability, and the discipline of remote work — foundational traits that support structured sales reporting and client communication today.
+        </div>
+        <div class="exp-tags">
+          <span class="exp-tag">Content Writing</span>
+          <span class="exp-tag">Research</span>
+          <span class="exp-tag">Education Tech</span>
+          <span class="exp-tag">Remote Work</span>
+          <span class="exp-tag">Communication</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══ EDUCATION ══ -->
+<section class="section edu-section">
+  <div class="section-eyebrow r">
+    <span class="section-eyebrow-num">03</span>
+    <span class="section-eyebrow-label">Education</span>
+    <span class="section-eyebrow-line"></span>
+  </div>
+  <h2 class="section-h r d1">The foundation that <em>started it all.</em></h2>
+  <div class="edu-card r d2">
+    <div class="edu-icon">🎓</div>
+    <div class="edu-info">
+      <div class="edu-name">High School Diploma — Computer Science</div>
+      <div class="edu-school">Jagat Mandir Higher Secondary School · Cosmopolitan College · Nepal</div>
+    </div>
+    <div class="edu-years">
+      <div class="edu-year-big">2012</div>
+      <div class="edu-year-range">— 2015</div>
+    </div>
+  </div>
+  <p class="r d3" style="font-size:12.5px;color:var(--text2);margin-top:14px;font-style:italic;">
+    ✱ Computer Science background informs the data-driven and CRM-focused approach to modern sales.
+  </p>
+</section>
+
+<!-- ══ FULLBLEED QUOTE ══ -->
+<div class="fullbleed">
+  <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1800&q=80" alt="Fine dining UAE" loading="lazy"/>
+  <div class="fullbleed-overlay"></div>
+  <div class="fullbleed-text">
+    <blockquote class="fullbleed-quote r">
+      "The best sale is one where the client didn't feel sold to — they felt understood."
+      <cite>— The Bishal Bishowkarma sales philosophy</cite>
+    </blockquote>
+  </div>
+</div>
+
+<!-- ══ EXPERTISE ══ -->
+<section class="section" id="expertise">
+  <div class="section-eyebrow r">
+    <span class="section-eyebrow-num">04</span>
+    <span class="section-eyebrow-label">What I Sell</span>
+    <span class="section-eyebrow-line"></span>
+  </div>
+  <h2 class="section-h r d1">The complete hospitality<br/><em>supply spectrum.</em></h2>
+  <div class="exp2-grid">
+    <div class="exp2-card r d1">
+      <div class="exp2-num">01</div>
+      <div class="exp2-title">Guestroom Appliances</div>
+      <div class="exp2-desc">Kettles, hairdryers, irons, safes, and in-room essentials for 3–7 star UAE properties.</div>
+      <div class="exp2-brands">Aolga ★ · Corby By Windsor · Oliver Hemming · Walthr</div>
+      <div class="exp2-bar"></div>
+    </div>
+    <div class="exp2-card r d2">
+      <div class="exp2-num">02</div>
+      <div class="exp2-title">Fine Porcelain &amp; Tableware</div>
+      <div class="exp2-desc">Restaurant-grade porcelain for fine dining, all-day dining, banquets, and room service.</div>
+      <div class="exp2-brands">Ariane · Claycraft · IPA Porcellane · Lazzaro · Royal Salisbury</div>
+      <div class="exp2-bar"></div>
+    </div>
+    <div class="exp2-card r d3">
+      <div class="exp2-num">03</div>
+      <div class="exp2-title">Glassware</div>
+      <div class="exp2-desc">Bar, bistro, and fine dining glass ranges optimised for UAE hospitality volume.</div>
+      <div class="exp2-brands">Libbey · Crystalex · Nude By Pasabahce</div>
+      <div class="exp2-bar"></div>
+    </div>
+    <div class="exp2-card r d1">
+      <div class="exp2-num">04</div>
+      <div class="exp2-title">Linen &amp; Bedding</div>
+      <div class="exp2-desc">Duvets, pillows, mattress protectors, bed linen, and terry for hospitality at scale.</div>
+      <div class="exp2-brands">The Rising World · Verbeelen · Slumberland · Mizetto</div>
+      <div class="exp2-bar"></div>
+    </div>
+    <div class="exp2-card r d2">
+      <div class="exp2-num">05</div>
+      <div class="exp2-title">Buffet &amp; Kitchen Equipment</div>
+      <div class="exp2-desc">Full buffet station solutions for hotel banquets and large-scale F&amp;B catering.</div>
+      <div class="exp2-brands">Novox · SCC · Scanbox · Hupfer · Pujadas · RubberMaid</div>
+      <div class="exp2-bar"></div>
+    </div>
+    <div class="exp2-card r d3">
+      <div class="exp2-num">06</div>
+      <div class="exp2-title">Amenities &amp; Design</div>
+      <div class="exp2-desc">Guest amenities, furniture, and décor that define property brand impression.</div>
+      <div class="exp2-brands">Xenios · WoodConcept · Hotelike · Casarovea · La Tavola</div>
+      <div class="exp2-bar"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SKILLS ══ -->
+<section class="section skills-section" id="skills">
+  <div class="section-eyebrow r">
+    <span class="section-eyebrow-num">05</span>
+    <span class="section-eyebrow-label">Core Skills</span>
+    <span class="section-eyebrow-line"></span>
+  </div>
+  <h2 class="section-h r d1">What I bring<br/><em>every single day.</em></h2>
+  <div class="skills-grid">
+    <div class="skill-block r d2">
+      <div class="skill-block-title"><span>🤝</span>Sales &amp; Client Management</div>
+      <div class="skill-row"><div class="skill-row-top"><span class="skill-name">B2B / B2C Field Sales</span><span class="skill-pct">92%</span></div><div class="skill-bg"><div class="skill-fill" style="width:92%"></div></div></div>
+      <div class="skill-row"><div class="skill-row-top"><span class="skill-name">Client Relationship Management</span><span class="skill-pct">90%</span></div><div class="skill-bg"><div class="skill-fill" style="width:90%"></div></div></div>
+      <div class="skill-row"><div class="skill-row-top"><span class="skill-name">Cross-Selling &amp; Upselling</span><span class="skill-pct">88%</span></div><div class="skill-bg"><div class="skill-fill" style="width:88%"></div></div></div>
+      <div class="skill-row"><div class="skill-row-top"><span class="skill-name">Consultative Selling</span><span class="skill-pct">85%</span></div><div class="skill-bg"><div class="skill-fill" style="width:85%"></div></div></div>
+    </div>
+    <div class="skill-block r d3">
+      <div class="skill-block-title"><span>📊</span>Strategy &amp; Data</div>
+      <div class="skill-row"><div class="skill-row-top"><span class="skill-name">Market Strategy &amp; Planning</span><span class="skill-pct">80%</span></div><div class="skill-bg"><div class="skill-fill" style="width:80%"></div></div></div>
+      <div class="skill-row"><div class="skill-row-top"><span class="skill-name">CRM Tools &amp; Pipeline Mgmt</span><span class="skill-pct">75%</span></div><div class="skill-bg"><div class="skill-fill" style="width:75%"></div></div></div>
+      <div class="skill-row"><div class="skill-row-top"><span class="skill-name">Revenue Growth Analysis</span><span class="skill-pct">78%</span></div><div class="skill-bg"><div class="skill-fill" style="width:78%"></div></div></div>
+      <div class="skill-row"><div class="skill-row-top"><span class="skill-name">New Market Expansion</span><span class="skill-pct">82%</span></div><div class="skill-bg"><div class="skill-fill" style="width:82%"></div></div></div>
+    </div>
+    <div class="skill-block r d4">
+      <div class="skill-block-title"><span>🗣️</span>Communication</div>
+      <div class="skill-row"><div class="skill-row-top"><span class="skill-name">English</span><span class="skill-pct">Professional</span></div><div class="skill-bg"><div class="skill-fill" style="width:90%"></div></div></div>
+      <div class="skill-row"><div class="skill-row-top"><span class="skill-name">Hindi</span><span class="skill-pct">Fluent</span></div><div class="skill-bg"><div class="skill-fill" style="width:95%"></div></div></div>
+      <div class="skill-row"><div class="skill-row-top"><span class="skill-name">Nepali</span><span class="skill-pct">Native</span></div><div class="skill-bg"><div class="skill-fill" style="width:100%"></div></div></div>
+      <div class="skill-row"><div class="skill-row-top"><span class="skill-name">Presentation &amp; Pitching</span><span class="skill-pct">83%</span></div><div class="skill-bg"><div class="skill-fill" style="width:83%"></div></div></div>
+    </div>
+    <div class="skill-block r d5">
+      <div class="skill-block-title"><span>🏨</span>Industry Knowledge</div>
+      <div class="skill-row"><div class="skill-row-top"><span class="skill-name">UAE HORECA Market</span><span class="skill-pct">86%</span></div><div class="skill-bg"><div class="skill-fill" style="width:86%"></div></div></div>
+      <div class="skill-row"><div class="skill-row-top"><span class="skill-name">Hospitality Supply Chain</span><span class="skill-pct">84%</span></div><div class="skill-bg"><div class="skill-fill" style="width:84%"></div></div></div>
+      <div class="skill-row"><div class="skill-row-top"><span class="skill-name">Product Portfolio (30+ Brands)</span><span class="skill-pct">90%</span></div><div class="skill-bg"><div class="skill-fill" style="width:90%"></div></div></div>
+      <div class="skill-row"><div class="skill-row-top"><span class="skill-name">Procurement Cycles</span><span class="skill-pct">80%</span></div><div class="skill-bg"><div class="skill-fill" style="width:80%"></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ BRANDS ══ -->
+<section class="section" id="brands">
+  <div class="section-eyebrow r">
+    <span class="section-eyebrow-num">06</span>
+    <span class="section-eyebrow-label">Brand Portfolio</span>
+    <span class="section-eyebrow-line"></span>
+  </div>
+  <h2 class="section-h r d1">Representing the world's<br/><em>finest hospitality brands.</em></h2>
+  <p class="section-sub r d2">Direct UAE distribution access. Ready stock available on priority lines including Aolga.</p>
+  <div class="brands-wrap">
+    <span class="b-chip hot">Aolga ★</span>
+    <span class="b-chip">Corby By Windsor</span><span class="b-chip">Oliver Hemming</span>
+    <span class="b-chip">Walthr</span><span class="b-chip">Ariane</span>
+    <span class="b-chip">Claycraft</span><span class="b-chip">IPA Porcellane</span>
+    <span class="b-chip">Royal Salisbury</span><span class="b-chip">Lazzaro</span>
+    <span class="b-chip">Pama</span><span class="b-chip">Sola</span>
+    <span class="b-chip">Vicando</span><span class="b-chip">Libbey</span>
+    <span class="b-chip">Crystalex</span><span class="b-chip">Nude By Pasabahce</span>
+    <span class="b-chip">Pujadas</span><span class="b-chip">RubberMaid</span>
+    <span class="b-chip">Rubikap</span><span class="b-chip">Novox</span>
+    <span class="b-chip">SCC</span><span class="b-chip">Scanbox</span>
+    <span class="b-chip">Hupfer</span><span class="b-chip">The Rising World</span>
+    <span class="b-chip">Verbeelen</span><span class="b-chip">Slumberland</span>
+    <span class="b-chip">Mizetto</span><span class="b-chip">Xenios</span>
+    <span class="b-chip">WoodConcept</span><span class="b-chip">Hotelike</span>
+    <span class="b-chip">Lush By Gesign</span><span class="b-chip">Casarovea</span>
+    <span class="b-chip">FOH Worldwide</span><span class="b-chip">La Tavola</span>
+    <span class="b-chip">Via Motif</span><span class="b-chip">Ingrid Lesage</span>
+  </div>
+  <p class="brands-note r">★ Priority push — ready stock in UAE warehouse</p>
+</section>
+
+<!-- ══════════════════════════════════════════
+   CONTACT — CHANGES:
+   ① Same big badge as About Me / Career Journey
+   ② Real contact details from LinkedIn (Image 8)
+   ③ Form actually sends email to bishalkarma12@gmail.com
+══════════════════════════════════════════ -->
+<section class="section contact-section" id="contact">
+  <!-- CHANGED: same prominent badge -->
+  <div class="section-badge r">
+    <span class="section-badge-num">07</span>
+    <div class="section-badge-sep"></div>
+    <span class="section-badge-text">Get in Touch</span>
+  </div>
+
+  <div class="contact-grid">
+    <!-- Left: info -->
+    <div class="rl">
+      <h2 class="contact-h">Let's build something<br/><em>together.</em></h2>
+      <p class="contact-sub">Whether you're a purchasing manager sourcing for a new opening, an F&amp;B director upgrading your tableware, or an executive housekeeper reviewing guestroom standards — I'm here for a real, no-pressure conversation.</p>
+      <div class="c-rows">
+        <div class="c-row">
+          <div class="c-icon">📍</div>
+          <div>
+            <div class="c-lbl">Address</div>
+            <!-- REAL DATA from Image 8 -->
+            <div class="c-val">Al Naif, Union, Dubai, UAE</div>
+          </div>
+        </div>
+        <div class="c-row">
+          <div class="c-icon">💼</div>
+          <div>
+            <div class="c-lbl">Company</div>
+            <div class="c-val">Zest Group LLC-FZ, Dubai UAE</div>
+          </div>
+        </div>
+        <div class="c-row">
+          <div class="c-icon">📱</div>
+          <div>
+            <div class="c-lbl">Phone / WhatsApp (Preferred)</div>
+            <!-- REAL DATA from Image 8 -->
+            <div class="c-val"><a href="tel:+971582979430">+971 58 297 9430</a></div>
+          </div>
+        </div>
+        <div class="c-row">
+          <div class="c-icon">📧</div>
+          <div>
+            <div class="c-lbl">Email</div>
+            <!-- REAL DATA from Image 8 -->
+            <div class="c-val"><a href="mailto:bishalkarma12@gmail.com">bishalkarma12@gmail.com</a></div>
+          </div>
+        </div>
+        <div class="c-row">
+          <div class="c-icon">🔗</div>
+          <div>
+            <div class="c-lbl">LinkedIn</div>
+            <!-- REAL DATA from Image 8 -->
+            <div class="c-val"><a href="https://linkedin.com/in/bishal-bishowkarma" target="_blank" rel="noopener">linkedin.com/in/bishal-bishowkarma</a></div>
+          </div>
+        </div>
+        <div class="c-row">
+          <div class="c-icon">🕐</div>
+          <div>
+            <div class="c-lbl">Response Time</div>
+            <div class="c-val">Same day · Mon–Sat · UAE time</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: form — sends email to bishalkarma12@gmail.com -->
+    <div class="rr d2">
+      <div class="form-wrap" id="contactForm">
+        <div class="form-row">
+          <input type="text"  id="f-name"    placeholder="Your full name"      required/>
+          <input type="text"  id="f-company" placeholder="Property / Company"/>
+        </div>
+        <div class="form-row">
+          <input type="email" id="f-email"   placeholder="Email address"       required/>
+          <input type="tel"   id="f-whatsapp"placeholder="WhatsApp number"/>
+        </div>
+        <input  type="text"   id="f-category"placeholder="What product category interests you?"/>
+        <textarea rows="4"    id="f-message" placeholder="Tell me more — e.g. tableware for 200 covers, guestroom appliances for 150-room hotel opening, linen restock for resort..."></textarea>
+        <button class="form-submit" id="f-submit" type="button">
+          <span id="f-btn-text">Send Message</span>
+          <span id="f-btn-arrow">→</span>
+        </button>
+        <p class="form-note" id="f-status"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <span class="ft-copy">© 2025 Bishal Bishowkarma · Sales &amp; Marketing Specialist · Zest Group LLC-FZ, UAE</span>
+  <div class="ft-right">
+    <a href="https://linkedin.com/in/bishal-bishowkarma" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="mailto:bishalkarma12@gmail.com">Email</a>
+    <a href="tel:+971582979430">+971 58 297 9430</a>
+    <button class="ft-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑ Top</button>
+  </div>
+</footer>
+
+<!-- ══════════════════════════════════════════════════
+   JAVASCRIPT
+══════════════════════════════════════════════════ -->
+<script>
+/* ── HAMBURGER / DRAWER ── */
+const hamburger = document.getElementById('hamburger');
+const drawer    = document.getElementById('mobileDrawer');
+const overlay   = document.getElementById('drawerOverlay');
+
+function openDrawer(){
+  hamburger.classList.add('open');
+  hamburger.setAttribute('aria-expanded','true');
+  drawer.classList.add('open');
+  overlay.classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeDrawer(){
+  hamburger.classList.remove('open');
+  hamburger.setAttribute('aria-expanded','false');
+  drawer.classList.remove('open');
+  overlay.classList.remove('open');
+  document.body.style.overflow='';
+}
+hamburger.addEventListener('click',()=>{
+  drawer.classList.contains('open') ? closeDrawer() : openDrawer();
+});
+overlay.addEventListener('click', closeDrawer);
+
+/* Close drawer when any drawer link is clicked */
+document.querySelectorAll('.drawer-link,.drawer-cta').forEach(a=>{
+  a.addEventListener('click', closeDrawer);
+});
+
+/* ── THEME TOGGLE (syncs desktop + drawer buttons) ── */
+const html = document.documentElement;
+function applyTheme(theme){
+  html.setAttribute('data-theme', theme);
+  const icon = theme==='dark' ? '🌙' : '☀️';
+  document.getElementById('themeBtn').textContent  = icon;
+  document.getElementById('themeBtn2').textContent = icon;
+  try{ localStorage.setItem('bb-theme', theme); }catch(e){}
+}
+// Restore saved theme
+try{
+  const saved = localStorage.getItem('bb-theme');
+  if(saved) applyTheme(saved);
+}catch(e){}
+
+document.getElementById('themeBtn').addEventListener('click',()=>{
+  applyTheme(html.dataset.theme==='dark' ? 'light' : 'dark');
+});
+document.getElementById('themeBtn2').addEventListener('click',()=>{
+  applyTheme(html.dataset.theme==='dark' ? 'light' : 'dark');
+  closeDrawer();
+});
+
+/* ── SCROLL PROGRESS ── */
+const spb = document.getElementById('spb');
+window.addEventListener('scroll',()=>{
+  const p = scrollY / (document.body.scrollHeight - innerHeight);
+  spb.style.transform = `scaleX(${Math.min(p,1)})`;
+},{passive:true});
+
+/* ── HERO PARALLAX ── */
+const heroBg = document.getElementById('heroBg');
+window.addEventListener('scroll',()=>{
+  if(scrollY < innerHeight)
+    heroBg.style.transform = `scale(1.06) translateY(${scrollY*.2}px)`;
+},{passive:true});
+
+/* ── SCROLL REVEAL ── */
+const revEls = document.querySelectorAll('.r,.rl,.rr');
+const revObs = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('v'); });
+},{threshold:.1, rootMargin:'0px 0px -36px 0px'});
+revEls.forEach(el => revObs.observe(el));
+
+/* ── SKILL BARS ── */
+const barObs = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting)
+      e.target.querySelectorAll('.skill-fill').forEach(b => b.classList.add('go'));
+  });
+},{threshold:.3});
+document.querySelectorAll('.skill-block').forEach(b => barObs.observe(b));
+
+/* ── ACTIVE NAV LINK ── */
+const sections  = document.querySelectorAll('section[id]');
+const navLinks  = document.querySelectorAll('.nav-links a');
+window.addEventListener('scroll',()=>{
+  let current='';
+  sections.forEach(s=>{
+    if(scrollY >= s.offsetTop - 100) current = s.id;
+  });
+  navLinks.forEach(a=>{
+    a.classList.toggle('active', a.getAttribute('href')==='#'+current);
+  });
+},{passive:true});
+
+/* ── CONTACT FORM — sends email to bishalkarma12@gmail.com ──
+   Uses mailto: which composes the email with all form data
+   and opens the user's email client. Works on all devices
+   without any backend or API key.
+── */
+document.getElementById('f-submit').addEventListener('click', function(){
+  const name     = document.getElementById('f-name').value.trim();
+  const company  = document.getElementById('f-company').value.trim();
+  const email    = document.getElementById('f-email').value.trim();
+  const whatsapp = document.getElementById('f-whatsapp').value.trim();
+  const category = document.getElementById('f-category').value.trim();
+  const message  = document.getElementById('f-message').value.trim();
+  const status   = document.getElementById('f-status');
+
+  // Validation
+  if(!name){
+    document.getElementById('f-name').focus();
+    status.textContent = '⚠ Please enter your name.';
+    status.style.color = '#f87171';
+    return;
+  }
+  if(!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){
+    document.getElementById('f-email').focus();
+    status.textContent = '⚠ Please enter a valid email address.';
+    status.style.color = '#f87171';
+    return;
+  }
+
+  // Build email body
+  const subject = encodeURIComponent(`New Enquiry from ${name}${company ? ' — '+company : ''} | bishal-bishowkarma.com`);
+  const body    = encodeURIComponent(
+`━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+NEW ENQUIRY — bishalbishowkarma.com
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Name:       ${name}
+Company:    ${company || '—'}
+Email:      ${email}
+WhatsApp:   ${whatsapp || '—'}
+Interest:   ${category || '—'}
+
+Message:
+${message || '(no message)'}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━`
+  );
+
+  const mailtoLink = `mailto:bishalkarma12@gmail.com?subject=${subject}&body=${body}`;
+
+  // Open mail client
+  window.location.href = mailtoLink;
+
+  // Update button UI
+  const btn  = document.getElementById('f-submit');
+  const txt  = document.getElementById('f-btn-text');
+  const arr  = document.getElementById('f-btn-arrow');
+  btn.classList.add('sent');
+  txt.textContent = 'Message Ready ✓';
+  arr.textContent = '';
+  status.style.color = 'var(--gold)';
+  status.textContent = '✓ Your email client has opened with the message pre-filled. Just hit Send!';
+
+  // Reset after 6s
+  setTimeout(()=>{
+    btn.classList.remove('sent');
+    txt.textContent = 'Send Message';
+    arr.textContent = '→';
+    status.textContent = '';
+  }, 6000);
+});
+
+/* Clear status on input */
+document.querySelectorAll('.form-wrap input,.form-wrap textarea').forEach(el=>{
+  el.addEventListener('input',()=>{
+    document.getElementById('f-status').textContent = '';
+  });
+});
+</script>
+</body>
+</html>
